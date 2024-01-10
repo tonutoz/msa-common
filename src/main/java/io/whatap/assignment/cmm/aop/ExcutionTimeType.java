@@ -10,9 +10,7 @@ import org.springframework.util.StopWatch;
 public enum ExcutionTimeType {
 
   MS("ms", "밀리세컨드", StopWatch::getTotalTimeMillis),
-  SECOND("sec", "세컨드", s -> {
-    return Double.valueOf(s.getTotalTimeSeconds()).longValue();
-  }),
+  SECOND("sec", "세컨드", s -> Double.valueOf(s.getTotalTimeSeconds()).longValue()),
   ;
   private final String code;
 
